@@ -8,7 +8,7 @@ A recurring problem in machine learning is the need to classify input into some 
 
 Say we want to classify some random piece of fruit we found lying around. In this example, we have three existing fruit categories: apple, blueberry, and coconut. Each of these fruits have three features we care about: size, weight, and color. This information is shown in the table below.
 
-<table here>
+.. figure:: https://github.com/machinelearningmindset/machine-learning-for-everybody/blob/bayes/images/bayes/Table.png
 
 We observe the piece of fruit we found and determine its features are moderate, heavy, and red. We can compare these features against the features of our known classes to guess what type of fruit it is. The unknown fruit shares 2 of 3 characteristics with the apple class so we guess that it’s an apple. The random fruit is heavy like a coconut but it shares more features with the apple class. We used the fact that the random fruit is moderately sized and red like an apple to make our guess.
 
@@ -22,10 +22,9 @@ Bayes’ Theorem
 --------------
 Bayes’ Theorem is a very useful theorem that shows up in probability theory and other disciplines. It looks like this:
 
-.. math::
-   P(A|B)=\frac{P(B|A)P(B)}{P(A)}
+.. figure:: https://github.com/machinelearningmindset/machine-learning-for-everybody/blob/bayes/images/bayes/Bayes.png
 
-With Bayes’ Theorem we examine conditional probabilities (the probability of an event happening given another event has happened). Here :math:`P(A|B)` is the probability that event A will happen given that event B has happened. We can determine this value using other information we know about events A and B. We need to know :math:`P(B|A)` (the probability that event B will happen given that event A has happened), :math:`P(B)` (the probability event B will happen), and :math:`P(A)` (the probability event A will happen). The interesting thing is we can apply Bayes’ Theorem to machine learning problems!
+With Bayes’ Theorem we examine conditional probabilities (the probability of an event happening given another event has happened). Here P(A|B) is the probability that event A will happen given that event B has happened. We can determine this value using other information we know about events A and B. We need to know P(B|A) (the probability that event B will happen given that event A has happened), P(B) (the probability event B will happen), and P(A) (the probability event A will happen). The interesting thing is we can apply Bayes’ Theorem to machine learning problems!
 
 -----------
 Naive Bayes
@@ -65,7 +64,7 @@ The following code snippet is based around guessing a color from RGB percentages
    clf = GaussianNB()
    # We train the model on our data
    clf.fit(X, y)
-
+   
    # Now we can make a prediction on what class new data belongs to
    print(clf.predict([[1, 0, 1]]))
 
@@ -98,8 +97,8 @@ The following code snippet is based on our fruit example.
    # We train the model on our data
    clf.fit(X, y)
 
-# Now we can make a prediction on what class new data belongs to
-print(clf.predict([[1, 2, 0]]))
+   # Now we can make a prediction on what class new data belongs to
+   print(clf.predict([[1, 2, 0]]))
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 Bernoulli Model (Discrete)
