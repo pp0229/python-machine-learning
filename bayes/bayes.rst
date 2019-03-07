@@ -68,7 +68,9 @@ The following code snippet is based around guessing a color from RGB percentages
    # Now we can make a prediction on what class new data belongs to
    print(clf.predict([[1, 0, 1]]))
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Multinomial Model (Discrete)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Multinomial models are used when we are working with discrete counts. Specifically, we want to use them when we are counting how often a feature occurs. For example, we might want to count how often the word “count” appears on this page.
 
 The following code snippet is based on our fruit example.
